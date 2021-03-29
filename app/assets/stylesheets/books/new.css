@@ -12,6 +12,9 @@
   text-align: center;
 }
 
+.date-greeting {
+  font-size: 40px;
+}
 .attendance-list {
   list-style: none;
 }

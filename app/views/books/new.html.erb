@@ -1,7 +1,12 @@
 <%= form_with model: @books, url: books_path, class: 'books-main', local: true do |f| %>
 
 <div class='main'>
-  <div class="form_wrap">  
+  <div class="form_wrap">
+  <div class=date-greeting>
+      <%= Date.current.strftime('%Y年 %m月 %d日') %><br>
+      <%="#{current_user.child_name}ちゃんの連絡帳" %>
+  </div><br>
+
     <div class="form-text">
     1. 本日の出欠をきかせてください
        </div>
@@ -28,7 +33,7 @@
           <%= f.collection_select(:reason_id, Reason.all, :id, :name, {}, {class:"select-box", id:"books_reason"}) %>
           <li class="list">② お休みの期間はどれくらいになりそうですか？</li>
           <%= f.collection_select(:period_id, Period.all, :id, :name, {}, {class:"select-box", id:"books_period"}) %>
-         <li class="list">③ 体調不良が原因の方は症状をお書きください。<br>
+         <li class="list">③ 体調不良が原因の方は症状をお書きください<br>
                           また、病院を受診した場合は、医師のコメントをあわせてお書きください</li>
          <%= f.text_area :comment1, class:"books-text", id:"book-comment1", maxlength:"1000" %>
        </ul>
@@ -39,7 +44,6 @@
         <div class="presence-btn-contents">
            <%= f.submit "送信する", class:"presence-btn" %>
        </div>
-       <div class="second_pict"><%= image_tag '/assets/image5.jpeg', size: "220x180" %></div>
   </div>
 </div>
 

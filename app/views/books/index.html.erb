@@ -11,13 +11,18 @@
       <div class='greeting'>
          <% if user_signed_in? %>
             <%= "あつまれ！" %><br />
-            <%= "#{current_user.classroom}組さん！！"%>        
-            <div class="first_pict"><%= image_tag "image1.jpeg", size: "220x180" %></div>
-            <%=link_to "入室する", new_book_path, class: :into_btn%>
+            <%= "#{current_user.classroom}組さん！！"%>   
+            </div>
+            <div class="greeting_pict">     
+            <div class="first_pict"><%= image_tag "619093.png", size: "900x700" %></div>
+            </div>
+         <div class="into_btn">
+            <%=link_to "入室する", new_book_path %>
+         </div>
          <% else %>
             <%= "あつまれ！" %><br />
             <%= "スクスク組さん！！"%>
-            <div class="first_pict"><%= image_tag "image1.jpeg", size: "220x180" %></div>
+            <div class="first_pict"><%= image_tag "619093.png", size: "900x700" %></div>
          <% end %>
      </div>
    </div>
