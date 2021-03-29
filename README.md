@@ -19,12 +19,12 @@ has_many :books
 | presence_id          | integer    | null: false                    |
 | mood_id              | integer    |                                |
 | body_temperature_id  | integer    |                                |
-| sleep                | integer    |                                |
+| sleep_id             | integer    |                                |
 | breakfast            | string     |                                |
-| comment              | text       |                                |   
-| reason               | integer    |                                |
-| period               | integer    |                                |
-| comment              | text       |                                |
+| comment1             | text       |                                |   
+| reason_id            | integer    |                                |
+| period_id            | integer    |                                |
+| comment2             | text       |                                |
 | user                 | references | null: false, foreign_key: true |
 
 ### Association

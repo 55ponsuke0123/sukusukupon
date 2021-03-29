@@ -12,16 +12,12 @@
          <% if user_signed_in? %>
             <%= "あつまれ！" %><br />
             <%= "#{current_user.classroom}組さん！！"%>        
-            <div class="first_pict"><%= image_tag "image3.jpeg", size: "220x180" %></div>
+            <div class="first_pict"><%= image_tag "image1.jpeg", size: "220x180" %></div>
             <%=link_to "入室する", new_book_path, class: :into_btn%>
-         <%#=link_to "入室する", new_book_path, class: :greeting_btn%>
-         <%#=link_to "ログアウトする", destroy_user_session_path, method: :delete,class: :greeting_logout%>
          <% else %>
             <%= "あつまれ！" %><br />
             <%= "スクスク組さん！！"%>
-            <div class="first_pict"><%= image_tag "image3.jpeg", size: "220x180" %></div>
-         <%#=link_to "ログインする", new_user_session_path, class: :greeting_btn%>
-         <%#=link_to "新規登録する", new_user_registration_path, class: :greeting_btn%>
+            <div class="first_pict"><%= image_tag "image1.jpeg", size: "220x180" %></div>
          <% end %>
      </div>
    </div>

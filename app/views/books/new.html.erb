@@ -1,16 +1,45 @@
 <%= form_with model: @books, url: books_path, class: 'books-main', local: true do |f| %>
 
 <div class='main'>
-  <div class="form_wrap">
-        <div class="form-text">
-          本日の出欠をきかせてください
-        </div>
-        <%= f.collection_select(:presence_id, Presence.all, :id, :name, {}, {class:"select-box", id:"books_presence"}) %>
+  <div class="form_wrap">  
+    <div class="form-text">
+    1. 本日の出欠をきかせてください
+       </div>
+       <%= f.collection_select(:presence_id, Presence.all, :id, :name, {}, {class:"select-box", id:"books_presence"}) %>
+      <div class="form-text-attendance">
+          2. 出席の方は以下を記入してください
+          <ul class="attendance-list">
+            <li class="list">① 今朝の機嫌はどうでしたか？</li>
+              <%= f.collection_select(:mood_id, Mood.all, :id, :name, {}, {class:"select-box", id:"books_mood"}) %>
+            <li class="list">② 今朝の体温は何度でしたか？</li>
+              <%= f.collection_select(:body_temperature_id, BodyTemperature.all, :id, :name, {}, {class:"select-box", id:"books_body_temperature"}) %>
+            <li class="list">③ 昨夜はよく眠れましたか？</li>
+              <%= f.collection_select(:sleep_id, Sleep.all, :id, :name, {}, {class:"select-box", id:"books_sleep"}) %>
+            <li class="list">④ 朝食は何を食べましたか？</li>
+              <%= f.text_area :breakfast, class:"books-text", id:"book-breakfast", maxlength:"40" %>
+            <li class="list">⑤ 何か保育士に伝えておきたいことがありますか？</li>
+               <%= f.text_area :comment1, class:"books-text", id:"book-comment1", maxlength:"1000" %>
+           </ul>
+      </div>
+      <div class="form-text-absence">
+      3. 欠席の方は以下を記入してください
+       <ul class="absence-list">
+          <li class="list">① お休みの理由はなんですか？</li>
+          <%= f.collection_select(:reason_id, Reason.all, :id, :name, {}, {class:"select-box", id:"books_reason"}) %>
+          <li class="list">② お休みの期間はどれくらいになりそうですか？</li>
+          <%= f.collection_select(:period_id, Period.all, :id, :name, {}, {class:"select-box", id:"books_period"}) %>
+         <li class="list">③ 体調不良が原因の方は症状をお書きください。<br>
+                          また、病院を受診した場合は、医師のコメントをあわせてお書きください</li>
+         <%= f.text_area :comment1, class:"books-text", id:"book-comment1", maxlength:"1000" %>
+       </ul>
+
+      
+
 
         <div class="presence-btn-contents">
            <%= f.submit "送信する", class:"presence-btn" %>
        </div>
-       <div class="second_pict"><%= image_tag '/assets/image1.jpeg', size: "220x180" %></div>
+       <div class="second_pict"><%= image_tag '/assets/image5.jpeg', size: "220x180" %></div>
   </div>
 </div>
 
