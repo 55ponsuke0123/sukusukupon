@@ -1,0 +1,40 @@
+body {
+  background-color: #fff;
+  background-image:
+    radial-gradient(#7bded9 20%, transparent 20%),
+    radial-gradient(pink 20%, transparent 20%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.main {
+width: 100vw;
+min-height: 100vh;
+background-size: cover;
+display: flex;
+flex-direction: column;
+}
+
+.greeting {
+font-size: 80px;
+font-family: Hannotate SC;
+text-align: center;
+}
+
+.pict {
+text-align: center;
+background-color: palevioletred
+}
+
+
+.top_greeting {
+font-size: 20px;
+font-family: Hannotate SC;
+text-align: right;
+}
+
+.into_btn {
+font-family: Hannotate SC;
+text-align: center;
+font-size: 50px;
+}

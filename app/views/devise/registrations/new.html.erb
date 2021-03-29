@@ -1,0 +1,47 @@
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+
+  <div class=" form_wrap">
+    <div class="form_header">
+      <h2 class="page-heading">新規登録</h2>
+    </div>
+        
+        
+
+        <div class="field">
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, "パスワード（6文字以上）" %><br />
+          <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation, "パスワード再入力" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :child_name, "お子さんのお名前" %><br />
+          <%= f.text_field :child_name %>
+        </div>
+
+        <div class="field">
+          <%= f.label :classroom, "クラス" %><br />
+          <%= f.text_area :classroom, class: :form__text %>
+        </div>
+
+        <div class="field">
+          <%= f.label :childminder1, "担任の先生のお名前" %><br />
+          <%= f.text_area :childminder1, class: :form__text %>
+        </div>
+
+
+        <div class="actions">
+          <%= f.submit "新規登録", class: :form__btn  %>
+        </div>
+
+        <div class="registration_pict"><%= image_tag "image4.jpeg", size: "220x180" %></div>
+  </div>
+<% end %>

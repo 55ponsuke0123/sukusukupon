@@ -1,0 +1,17 @@
+<%= form_with model: @books, url: books_path, class: 'books-main', local: true do |f| %>
+
+<div class='main'>
+  <div class="form_wrap">
+        <div class="form-text">
+          本日の出欠をきかせてください
+        </div>
+        <%= f.collection_select(:presence_id, Presence.all, :id, :name, {}, {class:"select-box", id:"books_presence"}) %>
+
+        <div class="presence-btn-contents">
+           <%= f.submit "送信する", class:"presence-btn" %>
+       </div>
+       <div class="second_pict"><%= image_tag '/assets/image1.jpeg', size: "220x180" %></div>
+  </div>
+</div>
+
+<% end %>     
