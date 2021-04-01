@@ -6,6 +6,9 @@
      </div><br>
 
 <%= form_with model: @book, url: books_path, class: 'books-main', local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+
     <div class="form-text">
     1. 本日の出欠をきかせてください
        </div>
