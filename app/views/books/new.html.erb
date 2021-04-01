@@ -1,12 +1,11 @@
-<%= form_with model: @books, url: books_path, class: 'books-main', local: true do |f| %>
-
 <div class='main'>
   <div class="form_wrap">
-  <div class=date-greeting>
+     <div class=date-greeting>
       <%= Date.current.strftime('%Y年 %m月 %d日') %><br>
       <%="#{current_user.child_name}ちゃんの連絡帳" %>
-  </div><br>
+     </div><br>
 
+<%= form_with model: @book, url: books_path, class: 'books-main', local: true do |f| %>
     <div class="form-text">
     1. 本日の出欠をきかせてください
        </div>
@@ -35,16 +34,16 @@
           <%= f.collection_select(:period_id, Period.all, :id, :name, {}, {class:"select-box", id:"books_period"}) %>
          <li class="list">③ 体調不良が原因の方は症状をお書きください<br>
                           また、病院を受診した場合は、医師のコメントをあわせてお書きください</li>
-         <%= f.text_area :comment1, class:"books-text", id:"book-comment1", maxlength:"1000" %>
+         <%= f.text_area :comment2, class:"books-text", id:"book-comment1", maxlength:"1000" %>
        </ul>
-
-      
-
+       </div>
 
         <div class="presence-btn-contents">
            <%= f.submit "送信する", class:"presence-btn" %>
+           <%=link_to 'もどる', root_path, class:"back-btn" %>
        </div>
+    <% end %> 
   </div>
 </div>
 
-<% end %>     
+    

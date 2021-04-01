@@ -1,0 +1,9 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       child_name: お子様のお名前
+       classroom: クラスの名前
+       childminder1: 担任の先生
+     book:
+       presence_id: 出欠

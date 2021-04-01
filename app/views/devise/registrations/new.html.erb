@@ -1,11 +1,11 @@
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-
+<div class="registration-main">
   <div class=" form_wrap">
     <div class="form_header">
       <h2 class="page-heading">新規登録</h2>
     </div>
         
-        
+        <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+          <%= render 'devise/shared/error_messages', model: f.object %>
 
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
@@ -41,7 +41,9 @@
         <div class="actions">
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>
+      <% end %>
 
+          <%=link_to "トップへ戻る", root_path, class: :top_btn%>   
         <div class="registration_pict"><%= image_tag "374836.png", size: "600x400" %></div>
+   </div>
   </div>
-<% end %>
