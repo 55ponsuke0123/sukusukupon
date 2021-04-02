@@ -10,28 +10,35 @@
   <div class='title-contents'>
      <% if user_signed_in? %>
          <div class='greeting'>
-            <div style="margin: 1em 0;
+           <div class="under_greeting">
+            <div style="margin: 0 auto;
                 background-color: #ffc6c6;
                 box-shadow: 0 0 0 8px #ffc6c6;
                 border: 2px dashed #ffffff;width:900px;"><%= "あつまれ！" %><br />
-              <%= "#{current_user.classroom}組さん！！"%></div>  
-            </div>
+              <%= "#{current_user.classroom}組さん！！"%></div>
+              </div><br />  
+           <div class="first_pict">
+            <%= image_tag "619093.png", size: "800x600" %></div>
+           <div class="into_btn">
+             <%=link_to "入室する", new_book_path %>
+           </div>
+         </div>
             <% else %>
          <div class='greeting'>
-            <div style="margin: 1em 0;
+           <div class="under_greeting">
+            <div style="margin: 0 auto;
                 background-color: #ffc6c6;
                 box-shadow: 0 0 0 8px #ffc6c6;
                 border: 2px dashed #ffffff;width:900px;"><%= "あつまれ！" %><br />
             <%= "スクスク組さん！！"%></div>
+            </div><br />
+            <div class="first_pict">
+            <%= image_tag "619093.png", size: "800x600" %></div>
          </div>
             <% end %>
       </div>
-         <div class='under_greeting'>
-            <div class="first_pict">
-            <%= image_tag "619093.png", size: "1000x800" %></div>
-         </div>
-         <div class="into_btn">
-            <%=link_to "入室する", new_book_path %>
-         </div>
+            
+         
+         
 </div>
 
