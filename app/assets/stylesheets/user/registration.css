@@ -11,3 +11,9 @@
   font-family: Hannotate SC;
   text-align: center;
 }
+
+.form_header p {
+  font-size: 30px;
+  display:inline-block;
+  vertical-align:top; 
+}

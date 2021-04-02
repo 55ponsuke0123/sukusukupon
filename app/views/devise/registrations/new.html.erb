@@ -1,7 +1,9 @@
 <div class="registration-main">
   <div class=" form_wrap">
     <div class="form_header">
-      <h2 class="page-heading">新規登録</h2>
+      <p><%= image_tag "school003.png", size: "50x40" %></p>
+      <p>新規登録</p>
+      <p><%= image_tag "school003.png", size: "50x40" %></p>
     </div>
         
         <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>

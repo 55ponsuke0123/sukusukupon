@@ -15,6 +15,13 @@
 .date-greeting {
   font-size: 40px;
 }
+
+.today_book p {
+  font-size: 30px;
+  display:inline-block;
+  vertical-align:top; 
+}
+
 .attendance-list {
   list-style: none;
 }
