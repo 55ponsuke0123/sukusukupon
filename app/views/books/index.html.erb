@@ -1,0 +1,36 @@
+<div class='main'>
+  <div class='top_greeting'>
+      <% if user_signed_in? %>
+         <%=link_to "ログアウトする", destroy_user_session_path, method: :delete,class: :greeting_logout%>
+      <% else %>
+         <%=link_to "ログインする", new_user_session_path, class: :greeting_btn%>
+         <%=link_to "新規登録する", new_user_registration_path, class: :greeting_btn%>
+      <% end %>
+ </div>
+  <div class='title-contents'>
+     <% if user_signed_in? %>
+         <div class='greeting'>
+            <div style="margin: 1em 0;
+                background-color: #ffc6c6;
+                box-shadow: 0 0 0 8px #ffc6c6;
+                border: 2px dashed #ffffff;width:900px;"><%= "あつまれ！" %><br />
+              <%= "#{current_user.classroom}組さん！！"%></div>  
+            </div>
+            <% else %>
+         <div class='greeting'>
+            <div style="margin: 1em 0;
+                background-color: #ffc6c6;
+                box-shadow: 0 0 0 8px #ffc6c6;
+                border: 2px dashed #ffffff;width:900px;"><%= "あつまれ！" %><br />
+            <%= "スクスク組さん！！"%></div>
+         </div>
+            <% end %>
+      </div>
+         <div class='under_greeting'>
+            <div class="first_pict"><%= image_tag "619093.png", size: "1400x1000" %></div>
+         </div>
+         <div class="into_btn">
+            <%=link_to "入室する", new_book_path %>
+         </div>
+</div>
+

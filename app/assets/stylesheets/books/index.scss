@@ -1,0 +1,42 @@
+body {
+  background-color: #fff;
+  background-image: 
+    radial-gradient(#7bded9 20%, transparent 20%),
+    radial-gradient(pink 20%, transparent 20%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.main {
+background-size: cover;
+display: flex;
+}
+
+.top_greeting {
+  font-size: 20px;
+  font-family: Hannotate SC;
+  text-align: right;
+  }
+
+.title-contents {
+  text-align: center;
+}
+
+.greeting {
+  font-size: 50px;
+  font-family: Hannotate SC;
+  text-align: center;
+  display: inline-block;
+  }
+
+
+
+.under_greeting {
+  text-align: center;
+}
+
+.into_btn {
+font-family: Hannotate SC;
+text-align: center;
+font-size: 30px;
+}

@@ -1,0 +1,12 @@
+.form-wrap {
+  font-size: 20px;
+  font-family: Hannotate SC;
+  text-align: center;
+}
+
+.form-header p{
+  font-size: 30px;
+  display:inline-block;
+  vertical-align:top; /*縦方向の揃え位置を指定*/
+ }
+ 
