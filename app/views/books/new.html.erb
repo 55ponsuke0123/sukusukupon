@@ -1,7 +1,7 @@
 <div class='main'>
    <div class="form_wrap">
      <div class="date-greeting">
-      <%= Date.current.strftime('%Y年 %m月 %d日') %>
+      <%= I18n.l Date.today, format: :long %>
       </div>
       <div class="today_book">
         <p><%= image_tag "school002.png", size: "50x40" %></p>
