@@ -22,6 +22,18 @@
   vertical-align:top; 
 }
 
+.form-presence {
+  font-size: 25px;
+}
+
+.form-attendance {
+  font-size: 25px;
+}
+
+.form-absence {
+  font-size: 25px;
+}
+
 .attendance-list {
   list-style: none;
 }
