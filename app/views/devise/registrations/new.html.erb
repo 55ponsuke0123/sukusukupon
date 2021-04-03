@@ -9,42 +9,61 @@
         <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
           <%= render 'devise/shared/error_messages', model: f.object %>
 
-        <div class="field">
-          <%= f.label :email, "メールアドレス" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password, "パスワード（6文字以上）" %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password_confirmation, "パスワード再入力" %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :child_name, "お子さんのお名前" %><br />
-          <%= f.text_field :child_name %>
-        </div>
-
-        <div class="field">
-          <%= f.label :classroom, "クラス" %><br />
-          <%= f.text_area :classroom, class: :form__text %>
-        </div>
-
-        <div class="field">
-          <%= f.label :childminder1, "担任の先生のお名前" %><br />
-          <%= f.text_area :childminder1, class: :form__text %>
-        </div>
+  <div class="form-group">
+   <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード(確認)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">お子様のお名前(全角)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :child_name, class:"input-name", id:"child-name", placeholder:"例) 山田太郎" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">クラス(全角)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :classroom, class:"input-name", id:"classroom", placeholder:"例) ひまわり" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">担任の先生(全角)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :childminder1, class:"input-name", id:"childminder1", placeholder:"例) 山田花子" %>
+    </div>
+  </div>
 
 
         <div class="actions">
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>
       <% end %>
-
           <%=link_to "トップへ戻る", root_path, class: :top_btn%>   
         <div class="registration_pict"><%= image_tag "374836.png", size: "600x400" %></div>
    </div>
