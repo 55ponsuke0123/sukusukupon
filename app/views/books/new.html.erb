@@ -25,7 +25,8 @@
           <ul class="attendance-list">
             <li class="list">① 今朝の機嫌はどうでしたか？</li>
               <%= f.collection_select(:mood_id, Mood.all, :id, :name, {}, {class:"select-box", id:"books_mood"}) %>
-            <li class="list">② 今朝の体温は何度でしたか？</li>
+            <li class="list">② 今朝の体温は何度でしたか？<br />
+                               (37.5度以上の場合は登園できません)</li>
               <%= f.collection_select(:body_temperature_id, BodyTemperature.all, :id, :name, {}, {class:"select-box", id:"books_body_temperature"}) %>
             <li class="list">③ 昨夜はよく眠れましたか？</li>
               <%= f.collection_select(:sleep_id, Sleep.all, :id, :name, {}, {class:"select-box", id:"books_sleep"}) %>
