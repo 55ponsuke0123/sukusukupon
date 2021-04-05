@@ -85,3 +85,14 @@ has_many :books
 belongs_to :user
 
 # ローカルでの動作方法
+1.git clone https://github.com/55ponsuke0123/sukusukupon.git
+2.cd ~/projects
+3.cd sukusukupon
+4.bundle install
+5.yarn install
+6.rails db:create
+7.rails db:migrate
+8.rails s
+
+ruby 2.6.5p114
+Rails 6.0.3.5
