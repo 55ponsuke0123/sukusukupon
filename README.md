@@ -11,7 +11,7 @@ https://sukusukupon.herokuapp.com
 （Basic認証）
 ID:admin, Pass:2222
 （ユーザー）
-email:matsu@matsu.ne.jp, password:matsu456
+email:matsu@docomo.ne.jp, password:matsumatsu123
 
 # 利用方法
 新規登録後、画面下部中央の「入室する」をクリックし、必要事項を記入して送信する。新規登録が完了している場合は、画面右上の「ログインする」をクリックし、登録したメールアドレスとパスワードを入力後、画面下部中央の「入室する」をクリックして必要事項を記入し、送信する。
@@ -42,18 +42,21 @@ email:matsu@matsu.ne.jp, password:matsu456
 所要時間:2h
 
 # 実装した機能についての画像やGIF
-1.トップ画面
 右上に「ログインする」「新規登録する」という文字があり、それぞれをクリックして必要なページに遷移するようにする。利用には新規登録が必要である。
-2.ユーザー新規登録
 ユーザー登録が完了したら右上には「ログアウトする」の文字が表示され、「あつまれ！スクスク組さん！！」の「スクスク」という部分が登録したクラス名に変わる。また新規登録後（もしくはログイン後）は下部中央に「入室する」のボタンが表示されるので、ここをクリックして連絡帳のページへ遷移する。
-3.連絡帳記入
 必須事項は出欠のみだが、出席の場合と欠席の場合でそれぞれ質問項目がある（これら質問事項への回答は任意）。記入を終えて「送信する」のボタンをクリックすると、連絡帳が送信され送信完了ページが表示される。
 
-![movie1](https://user-images.githubusercontent.com/74514503/114264220-a0ab1980-9a24-11eb-8b0d-d13fb56552b7.gif)
+<挙動確認動画>
+1.新規登録
+![movie1](https://user-images.githubusercontent.com/74514503/114265072-bcfd8500-9a29-11eb-9d5f-2cb50a275c6a.gif)
 
-![movie2](https://user-images.githubusercontent.com/74514503/114264284-e667e200-9a24-11eb-8dcf-ef9959d35a58.gif)
+2.連絡帳記述〜送信
+![movie2](https://user-images.githubusercontent.com/74514503/114265160-46ad5280-9a2a-11eb-89c5-2064dee63755.gif)
 
-![movie3](https://user-images.githubusercontent.com/74514503/114264306-03041a00-9a25-11eb-9a58-73a8664b5562.gif)
+3.ログイン
+![movie3](https://user-images.githubusercontent.com/74514503/114265211-8411e000-9a2a-11eb-9d87-1aa6a23b9551.gif)
+
+
 
 
 
