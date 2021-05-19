@@ -8,9 +8,9 @@ sukusukupon（すくすくぽん）
 https://sukusukupon.herokuapp.com
 
 # テスト用アカウント
-（Basic認証）
-ID:admin, Pass:2222
-（ユーザー）
+（Basic認証）  
+ID:admin, Pass:2222  
+（ユーザー）  
 email:coba@coba.com, password:cobacoba123
 
 # 利用方法
