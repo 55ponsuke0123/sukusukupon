@@ -11,7 +11,7 @@ https://sukusukupon.herokuapp.com
 （Basic認証）
 ID:admin, Pass:2222
 （ユーザー）
-email:matsu@docomo.ne.jp, password:matsumatsu123
+email:coba@coba.com, password:cobacoba123
 
 # 利用方法
 新規登録後、画面下部中央の「入室する」をクリックし、必要事項を記入して送信する。  新規登録が完了している場合は、画面右上の「ログインする」をクリックし、登録したメールアドレスとパスワードを入力後、画面下部中央の「入室する」をクリックして必要事項を記入し、送信する。
